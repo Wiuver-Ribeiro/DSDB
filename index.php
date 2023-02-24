@@ -1,9 +1,11 @@
-<?php session_start();
+<?php 
+ini_set('display_errors','Off');
+session_start();
 
-if (isset($_SESSION['logged_in'])) {
-    // Redirecionar para a página de login
+if ($_SESSION['logged_in'] == true) {
+    //Redirecionar para a página de login
     header('Location: carrinho.php');
-    exit();
+   
 }
 ?>
 

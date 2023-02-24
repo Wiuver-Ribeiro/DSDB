@@ -1,12 +1,14 @@
 <?php
 session_start();
 
-// Verificar se o usuário está logado
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    // Redirecionar para a página de login
-    header('Location: index.php');
-    exit();
-}
+// // Verificar se o usuário está logado
+// if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+//     // Redirecionar para a página de login
+//     header('Location: index.php');
+//     exit();
+// }
+
+$_SESSION['logged_in'] = false;
 
 
 
